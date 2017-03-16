@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="http://projects.sfchronicle.com/shared/js/jquery.min.js"></script>
+    <link  rel="stylesheet" type="text/css" href="style.css?2">
+    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+  </head>
+
+  <%= !json.project.embedded ? "<body>" : "<body is='responsive-body'>" %>
+
+    <div class="container">
+    
+    
+
+      <% json.modals.forEach(function(m) { %>
+        <div class="top10">
+     
+          <div class="image modal">
+            <img src="<%= m.blob %>">
+          </div>            
+            <div class="restaurant">
+              <%= m.title %>
+              <p class="description modal"><%= m.description %></p>
+              <div class="procon">
+                <div class="pro half"><span>PRO</span><br><%= m.pro %></div>
+                <div class="con half"><span>CON</span><br><%= m.con %></div>
+              </div>
+            </div>
+
+            <div class="products">
+
+              <div class="subtitle">Sample Products</div>
+            
+              <% if (m.prod_one) { %>
+                <div class="product">
+                <div class="prod-title"><%= m.prod_one_title %></div>
+                <div class="prod-desc"><%= m.prod_one %></div>
+                </div>
+              <% } %>
+
+              <% if (m.prod_two) { %>
+                <div class="product">
+                <div class="prod-title"><%= m.prod_two_title %></div>
+                <div class="prod-desc"><%= m.prod_two %></div>
+                </div>
+              <% } %>
+
+              <% if (m.prod_three) { %>
+                <div class="product">
+                <div class="prod-title"><%= m.prod_three_title %></div>
+                <div class="prod-desc"><%= m.prod_three %></div>
+                </div>
+              <% } %>
+
+              <% if (m.prod_four) { %>
+                <div class="product">
+                <div class="prod-title"><%= m.prod_four_title %></div>
+                <div class="prod-desc"><%= m.prod_four %></div>
+                </div>
+              <% } %>
+
+              <% if (m.prod_five) { %>
+                <div class="product">
+                <div class="prod-title"><%= m.prod_five_title %></div>
+                <div class="prod-desc"><%= m.prod_five %></div>
+                </div>
+              <% } %>
+
+              <% if (m.prod_six) { %>
+                <div class="product">
+                <div class="prod-title"><%= m.prod_six_title %></div>
+                <div class="prod-desc"><%= m.prod_six %></div>
+                </div>
+              <% } %>
+
+
+              
+            </div>
+            <hr>
+  
+        </div>
+      <% }); %>
+    </div>
+
+
+  </body>
+</html>

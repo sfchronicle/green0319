@@ -1,0 +1,207 @@
+@yellow: #ff9933;
+@darkyellow: #996600;
+
+.container{
+	max-width:800px;
+	margin:0 auto;
+	font-family:Antenna;
+  font-size:0.92em;
+
+	img{
+	width:100%;
+	}
+}
+
+.top10{
+	margin-bottom:1em;
+	padding-bottom:2em;
+
+	hr{
+	width:90%;
+	}
+
+	@media @mobile{
+  padding-bottom:1em;
+  }
+}
+
+.headline{
+	font-family: @block-graphics;
+  color: #333;
+  margin: 0 auto 4em;
+  max-width: 700px;
+  line-height: 1.2;
+  text-align: center;
+
+  @media @mobile{
+  	font-size:0.7em;
+  }
+
+  hr{
+  	margin-top:1em;
+  }
+}
+
+p{
+	font-family:@med-graphics;
+	font-size:0.9em;
+  padding:0;
+
+	@media @mobile{
+  font-size:0.7em;
+  }
+}
+
+.number{
+  font-size: 4em;
+  color: #499b4a;
+  text-align:center;
+  line-height:1;
+  font-family: @df-sans;
+
+  @media @mobile{
+  font-size: 3em;
+  line-height: 0.85;
+  }
+}
+
+.restaurant{
+  text-align: center;
+	font-family: @bold-graphics;
+	font-size: 1.3em;
+
+	@media @mobile{
+  font-size:1em;
+  }
+}
+
+.location{
+	text-align: center;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+
+  a{
+  	color:#546c8a;
+    border-bottom: 2px solid #546c8a;
+    &:hover{
+    	border-bottom-color:@yellow;
+    }
+  }
+
+  @media @mobile{
+  	font-size:0.8em;
+  }
+}
+.description{
+	margin-top: 1em;
+    
+  a{
+    color:#C12020;
+
+    &:hover{
+      color:lighten(#C12020, 20%);
+    }
+  }
+
+  &.modal{
+    margin-top:0;
+    font-size:0.8em;
+  }
+}
+
+.byline{
+  font-size: 0.6em;
+  line-height: 1;
+}
+
+.image{
+  max-width: 400px;
+  margin: -6% auto -2%;
+
+  &.modal{
+    @media @mobile{
+      max-width:200px;
+    }
+  }
+}
+.rating{
+  font-size: 1.5em;
+  color: #ff9933;
+  font-family:@bold-graphics;
+}
+
+.total{
+	font-size: 2em;
+  color: #ff9933;
+  font-family: @df-sans;
+}
+
+.procon{
+  .display-flex;
+  .justify-content(center);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.half{
+  
+  flex: 0 0 50%;
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0 20px;
+
+  @media @mobile{
+    font-size:12px;
+  }
+  
+  &.pro{
+    border-right: 1px solid #a7a7a7;
+    padding-right: 20px;
+  }
+
+  &.con{
+    padding-left: 20px;
+  }
+
+  span{
+    font-size:20px;
+    color:#65ae40;
+
+    @media @mobile{
+      font-size:18px;
+    }
+  }
+}
+
+.products{
+  max-width: 600px;
+  margin: 2em auto 0;
+}
+
+.subtitle{
+      font-size: 1em;
+    color: #65ae40;
+    margin-bottom: 10px;
+    text-transform:uppercase;
+
+    @media @mobile{
+      font-size:18px;
+    }
+}
+
+.prod-title{
+      font-size: 0.9em;
+      @media @mobile{
+        font-size:0.85em;
+      }
+}
+.prod-desc{
+      font-size: 0.8em;
+      @media @mobile{
+        font-size:0.7em;
+      }
+}
+
+.product{
+  margin-bottom:1em;
+}

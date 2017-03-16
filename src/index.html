@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="http://projects.sfchronicle.com/shared/js/jquery.min.js"></script>
+    <link  rel="stylesheet" type="text/css" href="style.css?2">
+    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+  </head>
+
+  <%= !json.project.embedded ? "<body>" : "<body is='responsive-body'>" %>
+
+    <div class="container">
+    
+    
+
+      <% json.howto.forEach(function(rest) { %>
+        <div class="top10">
+     
+          <div class="image" id="<%= rest.id %>">
+            <img src="<%= rest.img %>">
+          </div>            
+           <div class="number"><%= rest.id %></div>
+           <div class="restaurant"><%= rest.name %></div>
+
+          
+          <div class="description">
+
+            <p><%= rest.description %></p>
+          </div>
+          
+        
+        </div>
+      <% }); %>
+    </div>
+
+
+  </body>
+</html>
